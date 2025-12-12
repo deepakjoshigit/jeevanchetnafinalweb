@@ -1,7 +1,7 @@
 import React from 'react';
 import RazorpayButton from '../components/RazorpayButton';
 import { LEGAL_DOCS } from '../constants';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Landmark } from 'lucide-react';
 
 const Donate: React.FC = () => {
   return (
@@ -19,7 +19,11 @@ const Donate: React.FC = () => {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-slate-700">
                   <CheckCircle size={20} className="text-jcf-green flex-shrink-0" />
-                  <span>Tax Benefits under 80G</span>
+                  <span>Tax Benefits under 80G & 12A</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate-700">
+                  <CheckCircle size={20} className="text-jcf-green flex-shrink-0" />
+                  <span>CSR Certified (CSR00096141)</span>
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <CheckCircle size={20} className="text-jcf-green flex-shrink-0" />
@@ -28,10 +32,6 @@ const Donate: React.FC = () => {
                 <li className="flex items-center gap-3 text-slate-700">
                   <CheckCircle size={20} className="text-jcf-green flex-shrink-0" />
                   <span>Direct Impact on Communities</span>
-                </li>
-                <li className="flex items-center gap-3 text-slate-700">
-                  <CheckCircle size={20} className="text-jcf-green flex-shrink-0" />
-                  <span>Regular Updates on Utilization</span>
                 </li>
               </ul>
             </div>
@@ -53,30 +53,33 @@ const Donate: React.FC = () => {
         </div>
 
         {/* Bank Details for Direct Transfer */}
-        <div className="bg-white rounded-xl shadow p-6">
-          <h2 className="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Direct Bank Transfer (NEFT/RTGS)</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div className="bg-white rounded-xl shadow p-6 border-l-4 border-jcf-blue">
+          <div className="flex items-center gap-2 mb-4 border-b pb-2">
+            <Landmark className="text-jcf-blue" />
+            <h2 className="text-xl font-bold text-slate-800">Direct Bank Transfer (NEFT/RTGS)</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
              <div>
-                <span className="block text-slate-500 font-medium">Account Name</span>
-                <span className="font-bold text-slate-900">Jeevan Chetna Foundation</span>
+                <span className="block text-slate-500 font-medium uppercase text-xs tracking-wider">Account Name</span>
+                <span className="font-bold text-slate-900 text-lg">Jeevan Chetna Foundation</span>
              </div>
              <div>
-                <span className="block text-slate-500 font-medium">Bank Name</span>
-                <span className="font-bold text-slate-900">SBI (State Bank of India)</span>
+                <span className="block text-slate-500 font-medium uppercase text-xs tracking-wider">Bank Name</span>
+                <span className="font-bold text-slate-900 text-lg">SBI (State Bank of India)</span>
              </div>
              <div>
-                <span className="block text-slate-500 font-medium">Account Number</span>
-                <span className="font-bold text-slate-900 font-mono">00000044208565753</span>
+                <span className="block text-slate-500 font-medium uppercase text-xs tracking-wider">Account Number</span>
+                <span className="font-bold text-slate-900 font-mono text-lg">00000044208565753</span>
              </div>
              <div>
-                <span className="block text-slate-500 font-medium">IFSC Code</span>
-                <span className="font-bold text-slate-900 font-mono">SBIN0000646</span>
+                <span className="block text-slate-500 font-medium uppercase text-xs tracking-wider">IFSC Code</span>
+                <span className="font-bold text-slate-900 font-mono text-lg">SBIN0000646</span>
              </div>
           </div>
         </div>
 
         <div className="mt-8 text-center text-xs text-slate-500">
-           <p>PAN: {LEGAL_DOCS.find(d => d.label.includes("PAN"))?.value}</p>
+           <p>PAN: {LEGAL_DOCS.find(d => d.label.includes("PAN"))?.value} | CSR: {LEGAL_DOCS.find(d => d.label.includes("CSR"))?.value}</p>
         </div>
       </div>
     </div>

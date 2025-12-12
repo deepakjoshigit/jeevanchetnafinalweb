@@ -1,5 +1,6 @@
 import { LegalDoc } from './types';
 
+// Razorpay Live Key ID (Safe to expose). Secret Key must be kept on backend only.
 export const RAZORPAY_KEY_ID = "rzp_live_Rn2dFscVisbwzC"; 
 
 export const CONTACT_INFO = {
@@ -21,9 +22,15 @@ export const LEGAL_DOCS: LegalDoc[] = [
   { label: "CSR Certificate", value: "CSR00096141" },
   { label: "12A Registration", value: "AAGCJ9244CE2025101" },
   { label: "80G Registration", value: "AAGCJ9244CF2025101" },
+  { label: "Company MOA / INC13", value: "Available" },
+  { label: "AOA", value: "Article of Association Available" },
   { label: "NGO Darpan ID", value: "UK/20250681855" },
   { label: "DIN (Pravin Kumar Pandey)", value: "11145062" },
   { label: "DIN (Deepak Joshi)", value: "11145061" },
+  { label: "Rent Agreement", value: "Verified" },
+  { label: "Gem Portal Reg.", value: "Registered" },
+  { label: "CSR.GOV.IN", value: "Registered" },
+  { label: "e-Anudaan", value: "Registered" },
 ];
 
 export const NAV_ITEMS = [
