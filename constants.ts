@@ -10,6 +10,29 @@ export const CONTACT_INFO = {
   workingAddress: "Ramari Choti, Gadhi Aashram road, Haldwani, Nainital",
 };
 
+export const SOCIAL_MEDIA = [
+  { 
+    id: 'facebook', 
+    url: 'https://www.facebook.com/jeevanchetnafoundation', 
+    label: 'Facebook' 
+  },
+  { 
+    id: 'instagram', 
+    url: 'https://www.instagram.com/jeevanchetnafoundation/', 
+    label: 'Instagram' 
+  },
+  { 
+    id: 'twitter', 
+    url: 'https://x.com/ijeevanchetna', 
+    label: 'X (Twitter)' 
+  },
+  { 
+    id: 'whatsapp', 
+    url: 'https://wa.me/919068528721', 
+    label: 'WhatsApp' 
+  },
+];
+
 export const LEGAL_DOCS: LegalDoc[] = [
   { label: "PAN Card", value: "AAGCJ9244C (9/6/2025)" },
   { label: "TAN No", value: "MRTJO5239D" },

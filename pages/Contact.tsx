@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Share2 } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
+import SocialMediaIcons from '../components/SocialMediaIcons';
 
 const Contact: React.FC = () => {
   return (
@@ -39,9 +40,10 @@ const Contact: React.FC = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900">Phone</h3>
+                  <h3 className="font-bold text-slate-900">Phone & WhatsApp</h3>
                   <p className="text-slate-600 text-sm mt-1">
-                    {CONTACT_INFO.phone.join(', ')}
+                    {CONTACT_INFO.phone.join(', ')} <br/>
+                    <span className="text-green-600 font-medium text-xs mt-1 block">WhatsApp: +91 90685 28721</span>
                   </p>
                 </div>
               </div>
@@ -60,13 +62,13 @@ const Contact: React.FC = () => {
 
               <div className="flex items-start gap-4">
                 <div className="bg-slate-50 p-3 rounded-full text-slate-600">
-                  <Clock size={24} />
+                  <Share2 size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900">Office Hours</h3>
-                  <p className="text-slate-600 text-sm mt-1">
-                    Monday - Saturday: 9:00 AM - 6:00 PM
-                  </p>
+                  <h3 className="font-bold text-slate-900">Social Media</h3>
+                  <div className="mt-2">
+                    <SocialMediaIcons className="flex gap-4" iconClassName="w-6 h-6 fill-slate-600 hover:fill-jcf-blue transition-colors" />
+                  </div>
                 </div>
               </div>
             </div>

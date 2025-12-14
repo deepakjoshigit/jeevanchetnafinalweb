@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import Logo from './Logo';
 import { CONTACT_INFO, LEGAL_DOCS } from '../constants';
+import SocialMediaIcons from './SocialMediaIcons';
 
 const Footer: React.FC = () => {
   return (
@@ -28,10 +29,10 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Contact */}
+          {/* Quick Contact & Social */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Contact Us</h3>
-            <div className="space-y-3">
+            <div className="space-y-3 mb-6">
               {CONTACT_INFO.phone.map((p, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-jcf-green" />
@@ -45,6 +46,9 @@ const Footer: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            <h4 className="text-white text-sm font-bold mb-3">Follow Us</h4>
+            <SocialMediaIcons className="flex gap-4" iconClassName="w-5 h-5 fill-slate-400 hover:fill-white transition-colors" />
           </div>
 
           {/* Certificates - Important for Trust */}

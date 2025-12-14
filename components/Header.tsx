@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, Heart } from 'lucide-react';
 import Logo from './Logo';
 import { NAV_ITEMS, CONTACT_INFO } from '../constants';
+import SocialMediaIcons from './SocialMediaIcons';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,9 @@ const Header: React.FC = () => {
               <Mail size={14} /> {CONTACT_INFO.email[0]}
             </span>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex items-center space-x-6">
+             <SocialMediaIcons className="flex gap-3" iconClassName="w-3.5 h-3.5 fill-white hover:fill-jcf-orange transition-colors" />
+             <span className="opacity-50">|</span>
              <span>Reg. No: UK/20250681855</span>
           </div>
         </div>
@@ -80,6 +83,10 @@ const Header: React.FC = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="py-3 px-3">
+              <p className="text-xs text-slate-400 mb-2 font-semibold uppercase">Connect With Us</p>
+              <SocialMediaIcons className="flex gap-4" iconClassName="w-5 h-5 fill-slate-600 hover:fill-jcf-blue" />
+            </div>
             <Link
               to="/donate"
               className="block mt-4 text-center bg-jcf-green text-white px-3 py-3 rounded-md font-bold"
